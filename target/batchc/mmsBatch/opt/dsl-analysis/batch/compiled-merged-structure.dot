@@ -1,0 +1,22 @@
+digraph {
+    rankdir = LR;
+    "262a5caf-581c-4deb-86f6-b3155098431b" [shape=box, label="Batch\nmmsBatch"];
+    "420ba86b-de54-415f-9358-099c4c7036b0" [shape=box, label="JobFlow\nMainJobFlow"];
+    "24b4a29b-3bb6-445a-baae-4cb827ce8bc6" [shape=box, label="Stage\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageClient"];
+    "6cbc9d80-6fba-4190-ab4e-fb467f64caa2" [shape=box, label="Mapper\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper1"];
+    "24b4a29b-3bb6-445a-baae-4cb827ce8bc6" -> "6cbc9d80-6fba-4190-ab4e-fb467f64caa2";
+    "175e8fdb-7462-41c4-80bd-502faabf7b9a" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment1"];
+    "6cbc9d80-6fba-4190-ab4e-fb467f64caa2" -> "175e8fdb-7462-41c4-80bd-502faabf7b9a";
+    "eecc1832-405d-4b10-aa57-f9809fa518ce" [shape=box, label="Mapper\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper2"];
+    "24b4a29b-3bb6-445a-baae-4cb827ce8bc6" -> "eecc1832-405d-4b10-aa57-f9809fa518ce";
+    "dcfe1bc2-37e2-4ba9-b13c-97bb57b51a5f" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment2"];
+    "eecc1832-405d-4b10-aa57-f9809fa518ce" -> "dcfe1bc2-37e2-4ba9-b13c-97bb57b51a5f";
+    "8c2b0571-a787-4954-a47a-a254f7870d28" [shape=box, label="Reducer\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageReducer"];
+    "24b4a29b-3bb6-445a-baae-4cb827ce8bc6" -> "8c2b0571-a787-4954-a47a-a254f7870d28";
+    "0e9cde6e-c5ac-429b-8cac-f47cec1bc3b0" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.ReduceFragment3"];
+    "9a298775-b223-4819-9f99-25a95e49ff85" [shape=box, label="Fold\nMainOperator#folded"];
+    "0e9cde6e-c5ac-429b-8cac-f47cec1bc3b0" -> "9a298775-b223-4819-9f99-25a95e49ff85";
+    "8c2b0571-a787-4954-a47a-a254f7870d28" -> "0e9cde6e-c5ac-429b-8cac-f47cec1bc3b0";
+    "420ba86b-de54-415f-9358-099c4c7036b0" -> "24b4a29b-3bb6-445a-baae-4cb827ce8bc6";
+    "262a5caf-581c-4deb-86f6-b3155098431b" -> "420ba86b-de54-415f-9358-099c4c7036b0";
+}

@@ -1,0 +1,14 @@
+batch: mmsBatch
+flow: MainJobFlow
+    input:
+        modelA (teppeistudio.jobflow.io.ModelAFromCsv)
+        modelB (teppeistudio.jobflow.io.ModelBFromCsv)
+    output:
+        modelAB (teppeistudio.jobflow.io.ModelABtoCsv)
+    flow: teppeistudio.jobflow.MainJobFlow
+        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+        operator: teppeistudio.operator.MainOperator#folded([class teppeistudio.modelgen.dmdl.model.ModelAb, class teppeistudio.modelgen.dmdl.model.ModelAb])[]
+        output: OutputDescription{name=modelAB, type=class teppeistudio.modelgen.dmdl.model.ModelAb}
+        input: InputDescription{name=modelA, type=class teppeistudio.modelgen.dmdl.model.ModelA}
+        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+        input: InputDescription{name=modelB, type=class teppeistudio.modelgen.dmdl.model.ModelB}

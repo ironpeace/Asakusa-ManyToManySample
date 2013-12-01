@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <property name="compile_classpath" refid="maven.test.classpath"/>
+  <ant antfile="/Users/teppei_tosa/asakusa-develop/asakusa/scripts/asakusa-build.xml">
+    <target name="compile-batchapp"/>
+  </ant>
+</target>
+</project>

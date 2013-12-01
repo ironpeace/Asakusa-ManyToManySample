@@ -1,0 +1,22 @@
+digraph {
+    rankdir = LR;
+    "48231ff1-a84b-4bc5-ac5b-8958872b0cda" [shape=box, label="Batch\nmmsBatch"];
+    "edf80d70-715f-4806-8adf-a85e575040cc" [shape=box, label="JobFlow\nMainJobFlow"];
+    "c3a993e9-bcd1-44d9-8c72-c512ddc93eca" [shape=box, label="Stage\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageClient"];
+    "20f3232f-21c7-486e-a399-234707a6e596" [shape=box, label="Mapper\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper1"];
+    "c3a993e9-bcd1-44d9-8c72-c512ddc93eca" -> "20f3232f-21c7-486e-a399-234707a6e596";
+    "e63767f5-6eea-41fc-a347-87c8b5229361" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment1"];
+    "20f3232f-21c7-486e-a399-234707a6e596" -> "e63767f5-6eea-41fc-a347-87c8b5229361";
+    "9873ec09-831a-4657-8a57-0ebbfc9f29a0" [shape=box, label="Mapper\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper2"];
+    "c3a993e9-bcd1-44d9-8c72-c512ddc93eca" -> "9873ec09-831a-4657-8a57-0ebbfc9f29a0";
+    "d08e0b9b-8f32-4519-95d1-62ebfd1a0ed4" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment2"];
+    "9873ec09-831a-4657-8a57-0ebbfc9f29a0" -> "d08e0b9b-8f32-4519-95d1-62ebfd1a0ed4";
+    "1b8021c2-0329-4b83-b98d-9595e0195a12" [shape=box, label="Reducer\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageReducer"];
+    "c3a993e9-bcd1-44d9-8c72-c512ddc93eca" -> "1b8021c2-0329-4b83-b98d-9595e0195a12";
+    "bd57c70c-b720-43e3-a637-005076d423c5" [shape=box, label="Fragment\nteppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.ReduceFragment3"];
+    "8c3efa6d-cfdd-478d-a2d0-fd54ec9b5610" [shape=box, label="Fold\nMainOperator#folded"];
+    "bd57c70c-b720-43e3-a637-005076d423c5" -> "8c3efa6d-cfdd-478d-a2d0-fd54ec9b5610";
+    "1b8021c2-0329-4b83-b98d-9595e0195a12" -> "bd57c70c-b720-43e3-a637-005076d423c5";
+    "edf80d70-715f-4806-8adf-a85e575040cc" -> "c3a993e9-bcd1-44d9-8c72-c512ddc93eca";
+    "48231ff1-a84b-4bc5-ac5b-8958872b0cda" -> "edf80d70-715f-4806-8adf-a85e575040cc";
+}

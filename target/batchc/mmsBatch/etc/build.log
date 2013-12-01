@@ -1,0 +1,9 @@
+core.batchId = mmsBatch
+core.buildId = 338933e8-cc2e-40d7-b1bb-2404f5185305
+ASAKUSA_DEVELOP_HOME = /Users/teppei_tosa/asakusa-develop
+ASAKUSA_HOME = /Users/teppei_tosa/asakusa-develop/asakusa
+com.asakusafw.batchapp.build.java.version = 1.6.0_65
+com.asakusafw.batchapp.build.timestamp = 2013-12-01 15:22:35
+com.asakusafw.batchapp.project.version = 1.0-SNAPSHOT
+com.asakusafw.compiler.options = 
+com.asakusafw.framework.version = 0.5.2

@@ -1,0 +1,59 @@
+-- 入力CSVファイル形式
+
+"ModelA"
+@directio.csv(
+    has_header = TRUE
+)
+model_a = {
+    "id"
+    @directio.csv.field(name = "ID")
+    id : INT;
+
+    "name"
+    @directio.csv.field(name = "NAME")
+    name : TEXT;
+
+    "data_a"
+    @directio.csv.field(name = "DATA_A")
+    data_a : DOUBLE;
+};
+
+"ModelB"
+@directio.csv(
+    has_header = TRUE
+)
+model_b = {
+    "id"
+    @directio.csv.field(name = "ID")
+    id : INT;
+
+    "name"
+    @directio.csv.field(name = "NAME")
+    name : TEXT;
+
+    "data_b"
+    @directio.csv.field(name = "DATA_B")
+    data_b : DOUBLE;
+};
+
+"ModelAB"
+@directio.csv(
+    has_header = TRUE
+)
+model_ab = {
+    "id"
+    @directio.csv.field(name = "ID")
+    id : INT;
+
+    "name"
+    @directio.csv.field(name = "NAME")
+    name : TEXT;
+
+    "data_a"
+    @directio.csv.field(name = "DATA_A")
+    data_a : DOUBLE;
+
+    "data_b"
+    @directio.csv.field(name = "DATA_B")
+    data_b : DOUBLE;
+};

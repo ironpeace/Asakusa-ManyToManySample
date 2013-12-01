@@ -1,0 +1,22 @@
+batch: mmsBatch
+flow: MainJobFlow
+    input:
+        modelA (teppeistudio.jobflow.io.ModelAFromCsv)
+        modelB (teppeistudio.jobflow.io.ModelBFromCsv)
+    output:
+        modelAB (teppeistudio.jobflow.io.ModelABtoCsv)
+    stages:
+        prologue:
+        main:
+            stage: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageClient
+                mapper: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper1
+                    fragment: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment1
+                        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+                mapper: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageMapper2
+                    fragment: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.MapFragment2
+                        operator: com.asakusafw.vocabulary.flow.util.CoreOperatorFactory$Extend#toString([])[]
+                reducer: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.StageReducer
+                    fragment: teppeistudio.batchapp.mmsBatch.mainJobFlow.stage0001.ReduceFragment3
+                        operator: teppeistudio.operator.MainOperator#folded([class teppeistudio.modelgen.dmdl.model.ModelAb, class teppeistudio.modelgen.dmdl.model.ModelAb])[]
+        epilogue:
+            stage: teppeistudio.batchapp.mmsBatch.mainJobFlow.directio.epilogue.StageClient
